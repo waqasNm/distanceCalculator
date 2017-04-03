@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Address to Latitude And Longitude</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<!-- To use Geocoding from Google Maps V3 you need to link https://maps.googleapis.com/maps/api/js?sensor=false -->
+		
+	<fieldset>	
+		
+
+		    <legend><h3> Enter an adress and press the button</h3></legend>
+
+		<div>
+		    <input id="geocomplete" class="input" type="text" placeholder="Enter address here" />
+		    <!-- <button id="btn" onclick="calcCrow()">Get LatLong</button> -->
+		    <div>
+		        <p>Latitude:
+		            <input type="text" id="latitude" readonly />
+		        </p>
+		        <p>Longitude:
+		            <input type="text" id="longitude" readonly />
+		        </p>
+		    </div>
+
+		    <div>
+		    	<button onclick="calcCrow()">Calculate</button>
+		    	<h3>Calculated Distance</h3>	
+		    	<input  type="text" id="distance" readonly />
+		    	<p id="time"></p>
+		    </div>
+		</div>
+	</fieldset>
+
+	
+
+
+    
+    <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+    <script src="js/jquery.min.js"></script>
+
+    <script src="js/jquery.geocomplete.js"></script>
+      
+    <script>
+
+      $(function(){
+        
+        var options = {
+          map: "",
+          location: "Karachi"
+        };
+        
+        $("#geocomplete").geocomplete(options);
+
+      });
+
+    </script>
+
+
+
+
+	<!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script> -->
+	<script type="text/javascript" src="app.js"></script>
+
+
+</body>
+</html>
